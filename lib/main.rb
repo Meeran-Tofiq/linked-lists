@@ -74,6 +74,18 @@ class LinkedList
         false
     end
 
+    def find(val)
+        temp = @head
+        i = 0
+        until temp.nil?
+            return i if temp.value == val
+            temp = temp.next
+            i += 1
+        end
+
+        false
+    end
+
     def empty?
         @head == nil && @tail == nil
     end
