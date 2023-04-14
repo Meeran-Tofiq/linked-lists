@@ -92,7 +92,7 @@ class LinkedList
     end
 
     def insert_at(index, val)
-        return if index > @size
+        return if index > @size+1
 
         new_node = Node.new(val)
 
