@@ -60,8 +60,18 @@ class LinkedList
         (size-2).times { temp = temp.next }
         temp.next = nil
         @tail = temp
-        
+
         @size -= 1
+    end
+
+    def contains?(val)
+        temp = @head
+        until temp.nil?
+            return true if temp.value == val
+            temp = temp.next
+        end
+
+        false
     end
 
     def empty?
