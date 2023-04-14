@@ -86,6 +86,13 @@ class LinkedList
         false
     end
 
+    def to_s
+        str = ""
+        temp = head
+        size.times { |_| str += "(#{temp.value}) -> "; temp = temp.next}
+        str
+    end
+
     def empty?
         @head == nil && @tail == nil
     end
