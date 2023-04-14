@@ -53,6 +53,17 @@ class LinkedList
         temp.value
     end
 
+    def pop
+        return if empty?
+
+        temp = @head
+        (size-2).times { temp = temp.next }
+        temp.next = nil
+        @tail = temp
+        
+        @size -= 1
+    end
+
     def empty?
         @head == nil && @tail == nil
     end
