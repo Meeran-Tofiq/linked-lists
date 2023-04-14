@@ -91,6 +91,21 @@ class LinkedList
         str
     end
 
+    def insert_at(index, val)
+        return if index > @size
+
+        new_node = Node.new(val)
+
+        temp1 = @head
+        (index-1).times { temp1 = temp1.next }
+        temp2 = temp1.next
+
+        temp1.next = new_node
+        new_node.next = temp2
+
+        @size += 1
+    end
+
     def empty?
         @head == nil && @tail == nil
     end
