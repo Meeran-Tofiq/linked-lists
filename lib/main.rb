@@ -34,6 +34,19 @@ class LinkedList
         @size = @size + 1
     end
 
+    def prepend(val)
+        temp = Node.new(val)
+        if empty?
+            @head = temp
+            @tail = temp
+        else
+            temp.next = @head
+            @head = temp
+        end
+
+        @size += 1
+    end
+
     def empty?
         @head == nil && @tail == nil
     end
