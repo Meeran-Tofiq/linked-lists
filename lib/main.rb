@@ -19,4 +19,22 @@ class LinkedList
         @size = 0
     end
 
+    def append(val)
+        temp = (Node.new(val))
+
+        if empty?
+            @head = temp 
+            @tail = temp
+            @head.next = @tail
+        else
+            @tail.next = temp
+            @tail = temp
+        end
+
+        @size = @size + 1
+    end
+
+    def empty?
+        @head == nil && @tail == nil
+    end
 end
