@@ -47,6 +47,12 @@ class LinkedList
         @size += 1
     end
 
+    def at(index)
+        temp = head
+        index.times { temp = temp.next}
+        temp.value
+    end
+
     def empty?
         @head == nil && @tail == nil
     end
