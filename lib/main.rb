@@ -106,6 +106,16 @@ class LinkedList
         @size += 1
     end
 
+    def remove_at(index)
+        return if index > @size
+
+        temp = @head
+        (index-1).times { temp = temp.next }
+
+        temp.next = temp.next.next
+        @size -= 1
+    end
+
     def empty?
         @head == nil && @tail == nil
     end
