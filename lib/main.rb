@@ -82,8 +82,6 @@ class LinkedList
             temp = temp.next
             i += 1
         end
-
-        false
     end
 
     def to_s
